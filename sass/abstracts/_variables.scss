@@ -1,0 +1,60 @@
+/*      -----colors-----      */
+// colors main
+$color-main: #fbf6e3;
+$color-main-2: #f8e8cc;
+
+// colors secondary
+$color-secondary-light: #f3deb7;
+
+// colors accent
+$color-secondary: #fd7924;
+
+// colors neutral
+$color-dark-900: #4b3d24;
+$color-dark-700: rgba(75, 61, 36, 0.75);
+$color-dark-600: rgba(75, 61, 36, 0.35);
+
+// border
+$border: 3px solid $color-secondary-light;
+$border-accent: 2px solid $color-secondary;
+
+// shadows
+$box-shadow-1: 1rem 1rem 3rem rgba($color-dark-900, 0.8);
+$box-shadow-2: 2rem 0rem 2.4rem rgba($color-dark-900, 0.1);
+
+/*      -----border radius-----      */
+$border-radius-sm: 1.4rem;
+$border-radius-md: 2.4rem;
+$border-radius-lg: 3.2rem;
+$border-radius-round: 100rem;
+
+/*      -----space-----      */
+// sections
+$section-space: 6.8rem;
+
+// gutters
+$gutter-space-xs: 0.8rem;
+$gutter-space-sm: 1.8rem;
+$gutter-space-md: 2.2rem;
+$gutter-space-lg: 3.2rem;
+
+/*      -----fonts-----      */
+$header-width: 160rem;
+$content-width: 140rem;
+
+/*      -----padding-----      */
+$padding-md-uniform: 2.2rem;
+$padding-xs-uniform: 0.8rem;
+
+$padding-xs-vertical: 0.8rem 1.6rem;
+
+$padding-md: 2.2rem 2.8rem;
+$padding-sm: 0.8rem 1.2rem;
+$padding-xs: 0.4rem 0.8rem;
+
+/*      -----fonts-----      */
+// fonts
+
+/*      -----easing-----      */
+$ez-bz: cubic-bezier(0.2, 0, 0.4, 1);
+$ez-bz-2: cubic-bezier(0.35, 0, 0.25, 1);

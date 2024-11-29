@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Weatherly</title>
+
+		<link
+			rel="stylesheet"
+			href="css/styles.css"
+		/>
+
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+			crossorigin=""
+		/>
+		<script
+			src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+			integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+			crossorigin=""
+		></script>
+	</head>
+	<body>
+		<main>
+			<section
+				class="section-favorites"
+				aria-label="Favorite Locations"
+			>
+				<header class="favorites__header">
+					<div class="favorites__header-left">
+						<!-- <p class="favorites__timer">
+							Updates In:
+							<span class="favorites__timer-time">09:58</span>
+						</p> -->
+
+						<button
+							class="timer-refresh"
+							aria-label="Refresh"
+						>
+							<svg><use xlink:href="sprite.svg#refresh-arrow"></use></svg>
+						</button>
+					</div>
+
+					<div class="favorites__header-right">
+						<button
+							class="favorites-edit"
+							aria-label="Edit favorites"
+						>
+							<svg><use xlink:href="sprite.svg#edit"></use></svg>
+						</button>
+
+						<div class="favorites-edit__action hidden">
+							<button
+								class="favorites-edit__confirm"
+								aria-label="Confirm edit"
+							>
+								<svg><use xlink:href="sprite.svg#check"></use></svg>
+							</button>
+							<button
+								class="favorites-edit__cancel"
+								aria-label="Cancel edit"
+							>
+								<svg><use xlink:href="sprite.svg#cancel"></use></svg>
+							</button>
+						</div>
+					</div>
+				</header>
+
+				<!-- <div class="favorites__container">
+					<article
+						class="favorites__wrapper"
+						data-country="Egypt"
+					>
+						<h3 class="favorites__country">Egypt</h3>
+						<ul class="favorites__items">
+							<li class="weather__item weather__item--selected">
+								<div class="weather__info--top">
+									<h4 class="weather__info-day">Saturday</h4>
+									<p class="weather__info-place">Bani Suwayf</p>
+								</div>
+
+								<div class="weather__info--bottom">
+									<div class="weather__info-wind">
+										<svg><use xlink:href="sprite.svg#wind"></use></svg>
+										<span>5 m/sec</span>
+									</div>
+									<span class="weather__info-temprature"
+										>33 <span> &deg;C</span></span
+									>
+								</div>
+							</li>
+						</ul>
+					</article>
+				</div> -->
+			</section>
+
+			<section class="section-main">
+				<header class="main__header">
+					<h1>.Weatherly</h1>
+					<form
+						class="search-form"
+						action="#"
+					>
+						<div class="loader search-loader visually-hidden"></div>
+						<input
+							class="search__input"
+							type="text"
+							placeholder="Cairo/Cairo, Egypt"
+						/>
+						<button class="btn__search btn-main">Search</button>
+						<button
+							class="btn__locate btn-sec btn-round"
+							aria-label="locate me"
+						>
+							<svg><use xlink:href="sprite.svg#gps"></use></svg>
+						</button>
+					</form>
+				</header>
+				<div
+					class="map"
+					id="map"
+				></div>
+			</section>
+
+			<section class="section-current">
+				<ul class="current__items">
+					<!-- <li class="weather__item current__item">
+						<p class="weather__item-current-time">12:00</p>
+						<div class="weather__info--top">
+							<h2 class="weather__info-day">Saturday</h2>
+							<p class="weather__info-place">Bani Suwayf</p>
+						</div>
+
+						<div class="weather__info--bottom">
+							<div class="weather__info-wind">
+								<svg><use xlink:href="sprite.svg#wind"></use></svg>
+								<span>5 m/sec</span>
+							</div>
+							<span class="weather__info-temprature"
+								>33 <span> &deg;C</span></span
+							>
+						</div>
+					</li> -->
+				</ul>
+			</section>
+		</main>
+
+		<div class="fallback hidden">
+			<h1>Oops!</h1>
+			<p>
+				The application isn't responsive for mobile screens, kindly use it on a
+				PC or a desktop mode on your mobile.
+			</p>
+		</div>
+
+		<div
+			class="feedback-message feedback-message--success feedback-message--hidden"
+		>
+			<span>Success:</span>
+			<p>Lorem ipsum dolor sit amet consectetur!</p>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>

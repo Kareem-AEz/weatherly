@@ -1,0 +1,73 @@
+.weather__item {
+	font-weight: 600;
+	border: $border;
+	border-radius: $border-radius-sm;
+	padding: $padding-sm;
+	// height: 11rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	user-select: none;
+	cursor: pointer;
+	position: relative;
+
+	transition: box-shadow 0.168s $ez-bz, opacity 0.168s $ez-bz;
+
+	&--selected {
+		box-shadow: 0 0 0 0.3rem $color-secondary;
+	}
+}
+
+.favorites__items {
+	h4::after {
+		content: " NOW";
+		font-size: 1.4rem;
+		font-weight: 700;
+
+		color: $color-secondary;
+	}
+}
+
+.weather__info {
+	&--top {
+		display: flex;
+		align-items: end;
+
+		margin-bottom: $gutter-space-sm;
+
+		.weather__info-day {
+			font-size: 2.4rem;
+			margin-right: auto;
+			font-weight: 500;
+		}
+
+		p {
+			color: $color-dark-700;
+			font-size: 1.2rem;
+			font-weight: 800;
+		}
+	}
+
+	&--bottom {
+		display: flex;
+		align-items: center;
+
+		span {
+			font-size: 2.6rem;
+			margin-left: auto;
+		}
+	}
+}
+
+.weather__info {
+	&-wind {
+		display: flex;
+		gap: $gutter-space-xs;
+
+		span {
+			font-size: 1.6rem;
+		}
+	}
+}

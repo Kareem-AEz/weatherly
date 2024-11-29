@@ -1,0 +1,69 @@
+/* Reset margin, padding, and box-sizing for all elements */
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+
+	@media (max-width: 58.75em) {
+		font-size: 50%;
+	}
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 1.4;
+}
+
+/* Improve image styling */
+img {
+	border-style: none;
+	width: 100%;
+	height: auto;
+	display: block;
+
+	/* ATTENTION */
+	user-select: none;
+	pointer-events: none;
+}
+
+svg {
+	display: block;
+}
+
+/* Reset links */
+a {
+	display: inline-block;
+	background-color: transparent;
+	text-decoration: none;
+	color: inherit; /* Use the parent element's color */
+}
+
+button {
+	background: none; /* Remove default background */
+	border: none; /* Remove default border */
+	cursor: pointer; /* Show pointer cursor */
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+/* Forms */
+button,
+input,
+label,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* Use the parent's font family */
+}
