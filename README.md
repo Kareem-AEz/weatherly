@@ -44,19 +44,6 @@
 
 ---
 
-## 📂 File Structure
-
-Here's an overview of the project's structure:
-
-```
-Weatherly/ │ ├── index.html # Entry point for the application ├── app.js # Core application logic, including UI updates, API interactions, and event handling ├── styles.css # Application styling ├── sprite.svg # SVG icons for visual elements └── README.md # Project documentation
-
-markdown
-Copy code
-```
-
----
-
 ### Key Components
 
 - **`app.js`**  
