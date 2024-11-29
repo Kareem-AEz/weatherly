@@ -44,6 +44,14 @@
 
 ---
 
+## 📂 File Structure
+- `app.js`: Core logic including classes for APIs, geolocation, weather, and UI rendering.
+- `index.html`: Base structure of the application.
+- `styles.css`: Custom styles for the application.
+- `sprite.svg`: SVG icons used across the application.
+
+---
+
 ### Key Components
 
 - **`app.js`**  
@@ -56,3 +64,14 @@
 
 - **`styles.css`**  
   Handles visual design for the application, including styles for the map, loaders, buttons, and weather cards.
+
+---
+
+## 🤝 Contributing
+Contributions are welcome! If you'd like to improve this app or add new features:
+
+- Fork the repository.
+- Create a new branch (git checkout -b feature-name).
+- Commit your changes (git commit -m "Add feature").
+- Push to the branch (git push origin feature-name).
+- Open a pull request.
