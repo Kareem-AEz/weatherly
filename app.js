@@ -400,16 +400,18 @@ class App {
 	// init
 	initApp() {
 		if (window.screen.width <= 768) {
-			this.handleInfo("The page isn't responsive for mobile phones yet!");
-		}
-		// initializing services
-		this.geo = new GeoLocation();
-		this.weather = new Weather();
-		this.ui = new UI();
-		this.#initMap();
+			document.querySelector("main").remove();
+			document.querySelector(".fallback").classList.remove("hidden");
+		} else {
+			// initializing services
+			this.geo = new GeoLocation();
+			this.weather = new Weather();
+			this.ui = new UI();
+			this.#initMap();
 
-		this.#attachEventListeners();
-		this.parseLocationsAndConvertAndDisplay();
+			this.#attachEventListeners();
+			this.parseLocationsAndConvertAndDisplay();
+		}
 	}
 
 	// binding eventlistener
@@ -514,12 +516,6 @@ class App {
 	// handling refresh
 	async #handleRefresh() {
 		try {
-
-			if(Object.values(this.#locations).length === 0) {
-				this.handleInfo("Nothing's there to refresh!");
-				return;
-			}
-			
 			this.handleInfo("Refreshing!");
 			this.ui.showLoader();
 
