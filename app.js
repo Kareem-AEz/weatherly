@@ -399,18 +399,17 @@ class App {
 	/*------------ one time methods ------------*/
 	// init
 	initApp() {
-		if (window.screen.width <= 768) {
-			document.querySelector("main").remove();
-			document.querySelector(".fallback").classList.remove("hidden");
-		} else {
-			// initializing services
-			this.geo = new GeoLocation();
-			this.weather = new Weather();
-			this.ui = new UI();
-			this.#initMap();
+		// initializing services
+		this.geo = new GeoLocation();
+		this.weather = new Weather();
+		this.ui = new UI();
+		this.#initMap();
 
-			this.#attachEventListeners();
-			this.parseLocationsAndConvertAndDisplay();
+		this.#attachEventListeners();
+		this.parseLocationsAndConvertAndDisplay();
+
+		if (window.screen.width <= 768) {
+			this.handleInfo(`This page isn't responsive on mobile devices yet!`);
 		}
 	}
 
@@ -516,6 +515,11 @@ class App {
 	// handling refresh
 	async #handleRefresh() {
 		try {
+			if (Object.entries(this.#locations).length === 0) {
+				this.handleInfo(`Nothing's there to refresh!`);
+				return;
+			}
+
 			this.handleInfo("Refreshing!");
 			this.ui.showLoader();
 
