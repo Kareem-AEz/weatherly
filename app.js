@@ -575,7 +575,7 @@ class App {
 			// forward geo coding
 			const searchQuery = searchInput.value.trim();
 			const forwardGeoData = await this.geo.forwardGeoCoding(searchQuery);
-			console.log(forwardGeoData);
+			// console.log(forwardGeoData);
 			if (!forwardGeoData.success) {
 				// ! handling error: forward geocoding
 				this.handleError("Whooa, is this on mars? we couldn't get that!");
@@ -663,7 +663,7 @@ class App {
 
 			//* success
 			this.handleSuccess(`You're in ${reverseGeoData.data.city}`);
-			console.log("position fetched successfully!");
+			// console.log("position fetched successfully!");
 		} catch (error) {
 			console.error(`Locate error: ${error.message}`);
 		} finally {
@@ -830,7 +830,7 @@ class App {
 			"neighbourhood",
 		];
 
-		console.log(obj);
+		// console.log(obj);
 
 		if (!validTypes.includes(obj.addresstype)) {
 			return {
