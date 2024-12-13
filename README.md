@@ -1,3 +1,5 @@
+![Sendy](assets/wetherly-og.jpg)
+
 # 🌦️ Weatherly: A Dynamic Weather and Location Tracker
 
 **Weatherly** is a JavaScript-powered weather and location tracker app that brings real-time weather updates, intuitive geolocation, and a smooth user experience. With its dynamic features, Weatherly is designed to make weather tracking interactive and straightforward.
