@@ -1,4 +1,4 @@
-![Sendy](assets/wetherly-og.jpg)
+![Sendy](assets/weatherly-og.jpg)
 
 # 🌦️ Weatherly: A Dynamic Weather and Location Tracker
 
